@@ -1,5 +1,5 @@
 <package format="3">
-  <name>chain_follow</name>
+  <name>turtle_chain</name>
   <version>0.0.1</version>
   <description>ROS2 turtle chain following system</description>
 
