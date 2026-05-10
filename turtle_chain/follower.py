@@ -71,7 +71,7 @@ class Follower(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    follower = Follower('turtle2', 'turtle1')
+    follower = Follower(follower_name, target_name)
 
     rclpy.spin(follower)
 
