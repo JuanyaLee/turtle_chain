@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'chain_follow'
+package_name = 'turtle_chain'
 
 setup(
     name=package_name,
