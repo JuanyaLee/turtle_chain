@@ -5,23 +5,37 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
+
     return LaunchDescription([
 
         Node(
-            package='turtlesim',
-            executable='turtlesim_node',
-            name='sim'
+            package='turtle_chain',
+            executable='follower',
+            name='follower_2',
+            parameters=[{
+                'follower': 'turtle2',
+                'target': 'turtle1'
+            }]
         ),
 
         Node(
-            package='chain_follow',
-            executable='follower_node',
-            name='follower'
+            package='turtle_chain',
+            executable='follower',
+            name='follower_3',
+            parameters=[{
+                'follower': 'turtle3',
+                'target': 'turtle2'
+            }]
         ),
 
         Node(
-            package='chain_follow',
-            executable='chain_manager',
-            name='manager'
+            package='turtle_chain',
+            executable='follower',
+            name='follower_4',
+            parameters=[{
+                'follower': 'turtle4',
+                'target': 'turtle3'
+            }]
         )
+
     ])
